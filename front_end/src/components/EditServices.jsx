@@ -34,7 +34,7 @@ function EditServices() {
   const handleEdit = async (e) => {
     e.preventDefault()
     try {
-      await axios.put(`http://localhost:3000/api/services/update-service/${service._id}`, data)
+      await axios.put(`https://health-services-pan3.onrender.com/api/services/update-service/${service._id}`, data)
       toast.success('Service Edited Successfully')
       navigate('/')
     } catch (error) {
