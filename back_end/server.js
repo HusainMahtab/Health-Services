@@ -4,8 +4,14 @@ import cors from "cors"
 const app=express()
 const port=3000
 app.use(cors({
-    origin:"*"
-}))
+    origin: "https://health-services-1.onrender.com",
+    credentials: true, // Allow cookies and credentials
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow these methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Ensure headers are allowed
+  }));
+  
+  // Handle OPTIONS preflight requests automatically
+  app.options('*', cors());
 
 // connect with db
 connectDB()
