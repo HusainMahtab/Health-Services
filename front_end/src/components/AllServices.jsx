@@ -8,7 +8,7 @@ function AllServices() {
     const navigate=useNavigate()
     const getAllServices=async()=>{
         try {
-            const response=await axios.get(`http://localhost:3000/api/services/`)
+            const response=await axios.get(`https://health-services-pan3.onrender.com/api/services/`)
             console.log("response",response.data)
             setData(response.data)
             setLoading(false)
