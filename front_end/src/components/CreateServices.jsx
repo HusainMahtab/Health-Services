@@ -22,7 +22,7 @@ function CreateServices() {
     e.preventDefault()
     console.log("data",data)
      try {
-       axios.post(`http://localhost:3000/api/services/create-service`,data)
+       axios.post(`https://health-services-pan3.onrender.com/api/services/create-service`,data)
        console.log("Add service successfully")
        toast.success("Service Added Successfully")
        navigate("/")
