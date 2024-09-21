@@ -22,7 +22,7 @@ function AllServices() {
 
     const handleDelete=async(_id)=>{
         try {
-            await axios.delete(`http://localhost:3000/api/services/delete-service/${_id}`)
+            await axios.delete(`https://health-services-pan3.onrender.com/api/services/delete-service/${_id}`)
             setData((prevData) => prevData.filter(service => service._id !== _id))
             toast.success("deleted successfully")
             console.log("deleted successfully")
